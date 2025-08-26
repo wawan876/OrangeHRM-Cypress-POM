@@ -1,0 +1,21 @@
+{
+  "name": "loginorange-with-pom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git remote add origin https://github.com/wawan876/login-orangehrm-withPOM.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^15.0.0"
+  },
+  "devDependencies": {
+    "cypress-xpath": "^2.0.1"
+  }
+}
