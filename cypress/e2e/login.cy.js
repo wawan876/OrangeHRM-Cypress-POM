@@ -8,12 +8,15 @@ describe('', () => {
     it('username valid & password valid', () => {
         loginpage.InputUsername(datalogin[0].username)
         loginpage.InputPassword(datalogin[0].password)
+         // Intercept the GET request for login validation
+        cy.intercept('GET', 'https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/dashboard/employees/action-summary').as('loginRequest');
         loginpage.submit()
         loginpage.verifyLoginSuccess()
         
     });
 
    it('username invalid & password valid', () => {
+
         loginpage.InputUsername(datalogin[1].username1)
         loginpage.InputPassword(datalogin[1].password1)
         loginpage.submit()
@@ -21,9 +24,11 @@ describe('', () => {
     });
 
     it('username valid & password invalid', () => {
+
         loginpage.InputUsername(datalogin[2].username2)
         loginpage.InputPassword(datalogin[2].password2)
         loginpage.submit()
+
         loginpage.verifypassworderror()
     });
 
@@ -37,15 +42,18 @@ describe('', () => {
     it('username valid & withoutpassword', () => {
         loginpage.InputUsername(datalogin[4].username4)
         loginpage.submit()
+
     });
 
     it('withoutusername & password valid', () => {
         loginpage.InputPassword(datalogin[5].password5)
         loginpage.submit()
+
     });
 
     it('without username & withoutpassword', () => {
         loginpage.submit()
+
     });
 
 });
