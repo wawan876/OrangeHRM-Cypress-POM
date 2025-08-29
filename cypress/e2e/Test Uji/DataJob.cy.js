@@ -8,6 +8,7 @@ describe('Data Job', () => {
         loginpage.visit();
         loginpage.InputUsername(datalogin[0].username);
         loginpage.InputPassword(datalogin[0].password);
+        loginpage.intercept();
         loginpage.submit();
         loginpage.verifyLoginSuccess();
         

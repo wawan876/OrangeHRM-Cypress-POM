@@ -1,7 +1,7 @@
 const Directory = {
 
     navigateToDirectory(){
-        cy.get(".oxd-main-menu-item").contains("Directory").click();
+        cy.xpath("//a[.='Directory']").click();
     },
 
     searchEmployee(employeeName){

@@ -14,8 +14,8 @@ const AdminUserManagement = {
     },
 
     EmployeeName(username){
-        cy.get("[placeholder='Type for hints...']").wait(1000).type("aish");
-        cy.get(".oxd-autocomplete-dropdown").contains("Aish Prakash").click();
+        cy.get("[placeholder='Type for hints...']").wait(1000).type("re");
+        cy.get(".oxd-autocomplete-dropdown").contains("Rebecca Harmony").click();
     },
     Status(){
         cy.get(".oxd-select-text-input").eq(1).click();
@@ -30,11 +30,11 @@ const AdminUserManagement = {
         cy.get(".oxd-button--secondary[type='button']").click();
         cy.get(".oxd-select-text--arrow").eq(0).click();
         cy.get(".oxd-select-dropdown").contains("Admin").click();
-        cy.get("[placeholder='Type for hints...']").wait(1000).type("ais");
-        cy.get(".oxd-autocomplete-dropdown").contains("Aish Prakash").click();
+        cy.get("[placeholder='Type for hints...']").wait(1000).type("re");
+        cy.get(".oxd-autocomplete-dropdown").contains("Rebecca Harmony").click();
         cy.get(".oxd-select-text--arrow").eq(1).click();
         cy.get(".oxd-select-dropdown").contains("Enabled").click();
-        cy.get(".oxd-input.oxd-input--active").eq(1).type("WAWAN TES QA");
+        cy.get(".oxd-input.oxd-input--active").eq(1).type("WAWAN TES QUALITY ASSURANCE");
         cy.get(".user-password-cell .oxd-input").type("Wawan123@");
         cy.xpath("//div[@class='oxd-form-row user-password-row']//div[@class='oxd-grid-item oxd-grid-item--gutters']//input[@class='oxd-input oxd-input--active']").type("Wawan123@");
         cy.get(".oxd-button--secondary").click();

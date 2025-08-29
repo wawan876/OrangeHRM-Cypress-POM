@@ -5,15 +5,15 @@ const loginpage = {
     },
     
     InputUsername(username) {
-        cy.xpath("//input[@name='username']").type(username);
+        cy.get("[name='username']").wait(1000).type(username);
     },
     
     InputPassword(password) {
-        cy.xpath("//input[@name='password']").type(password);
+        cy.get("[name='password']").wait(1000).type(password);
     },
     
     submit() {
-        cy.get(".oxd-button").click();
+        cy.get(".oxd-button").wait(1000).click();
     },
     
     verifyLoginSuccess() {
@@ -28,11 +28,15 @@ const loginpage = {
     },
     
     verifypasswordrequired() {
-        cy.xpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']']").should('contain text', 'Required');
+        cy.get(".oxd-text--span").should('contain.text', 'Required');
     },
     
     verifyusernamerequired() {
-        cy.xpath("//span[@class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message']").should('contain text', 'Required');
+        cy.get(".oxd-text--span").should('contain.text', 'Required');
+    },
+    verifyusernameandpassrequired(){
+        cy.get(".oxd-form > div:nth-of-type(1) .oxd-text").should('contain.text', 'Required');
+        cy.get(".oxd-form > div:nth-of-type(2) .oxd-text").should('contain.text', 'Required');
     },
     
     forgot_password() {
@@ -45,6 +49,9 @@ const loginpage = {
     
     btn_reset() {
         cy.get(".oxd-button--secondary").click();
+    },
+    intercept(){
+        cy.intercept('GET', 'https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/dashboard/employees/action-summary').as('loginRequest');
     }
 };
 

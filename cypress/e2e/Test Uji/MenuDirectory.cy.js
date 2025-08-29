@@ -9,8 +9,7 @@ describe('Menu Directory', () => {
         loginpage.InputPassword(datalogin[0].password)
         loginpage.submit();
         loginpage.verifyLoginSuccess();
-        // Intercept the GET request for login validation
-        cy.intercept('GET', 'https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/dashboard/employees/action-summary').as('loginRequest');
+        loginpage.intercept(); // Set up the intercept for login validation
         Directory.navigateToDirectory();
         Directory.searchEmployee();
         Directory.JobTitle();
