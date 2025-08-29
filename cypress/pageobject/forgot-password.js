@@ -10,7 +10,7 @@ const forgotpassword ={
         cy.get(".oxd-button--secondary").click();
     },
     assertSuccessResetpass(){
-        cy.get(".oxd-text--h6").should("contain.text, Reset Password link sent successfully");
+        cy.get(".oxd-text--h6").should("include.text", "Reset Password link sent successfully");
     }
 }
 export default forgotpassword;

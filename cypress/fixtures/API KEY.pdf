@@ -1,0 +1,28 @@
+API KEY SHIPPING COST ld8HtlTb012e538fde009a72ZNfVqPPi
+API KEY SHIPPING DELIVERY dMTPHc0B012e538fde009a72o5kNd47Q
+
+x-api-key: reqres-free-v1 TestFirstName TestMiddleName TestLastName
+
+cy.get(':nth-child(2) > .oxd-input').click()
+cy.get(':nth-child(2) > .oxd-input').contains('Admin).click()
+cy.get('.oxd-autocomplete-text-input > input').type('TestFirstName TestMiddleName TestLastName')
+cy.get(':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text--after > .oxd-icon').click()
+cy.get(':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text--after > .oxd-icon'.contains('Enabled) .click()
+
+ });
+
+    it('', () => {
+        cy.visit ('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+        cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type('wawan')
+        cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type('wawan123')
+        cy.get('.oxd-button').click()
+      
+    });
+
+    it('', () => {
+        cy.visit ('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+        cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type("")
+        cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type("")
+        cy.get('.oxd-button').click()
+
+cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text-input')

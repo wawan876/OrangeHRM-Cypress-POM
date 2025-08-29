@@ -1,5 +1,5 @@
-import loginpage from "../pageobject/login-test";
-import datalogin from "../fixtures/datalogin.json";
+import loginpage from "../../pageobject/login-test";
+import datalogin from "../../fixtures/datalogin.json";
 
 describe('', () => {
     beforeEach(() => {
